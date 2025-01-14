@@ -1,0 +1,33 @@
+name: ModernCmds
+version: '1.0'
+main: me.lukiiy.modernCmds.ModernCmds
+author: Lukiiy
+description: Backports of commands from more recent versions
+commands:
+  achievement:
+    permission: command.achievement
+    usage: "/<command> <give|list> <player> <achievement_id|*>"
+  clear:
+    permission: command.clear
+    usage: "/<command> [player] [item:data]"
+  damage:
+    permission: command.damage
+    usage: "/<command> [player] [amount]"
+  fill:
+    permission: command.fill
+    usage: "/<command> <from> <to> <block_id> <mode> [mode_arg]"
+  replaceitem:
+    permission: command.replaceitem
+    usage: "/<command> <block|entity> <position|player> <slot> <material_id> [count]"
+  setblock:
+    permission: command.setblock
+    usage: "/<command> <x> <y> <z> <block>"
+  summon:
+    permission: command.summon
+    usage: "/<command> <entity> <x> <y> <z>"
+  toggledownfall:
+    permission: command.weather
+    usage: "/<command>"
+  weather:
+    permission: command.weather
+    usage: "/<command> <clear|rain|thunder> [duration]"
