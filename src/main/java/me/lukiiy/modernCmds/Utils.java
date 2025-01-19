@@ -58,11 +58,7 @@ public class Utils {
     }
 
     private static @Nullable Double doubleOrNull(String i) {
-        try {
-            return Double.parseDouble(i);
-        }
-        catch (NumberFormatException ignored) {
-            return null;
-        }
+        try {return Double.parseDouble(i);}
+        catch (NumberFormatException ignored) {return null;}
     }
 }

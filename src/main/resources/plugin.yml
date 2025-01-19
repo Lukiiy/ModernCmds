@@ -16,9 +16,6 @@ commands:
   fill:
     permission: command.fill
     usage: "/<command> <from> <to> <block_id> <mode> [mode_arg]"
-  replaceitem:
-    permission: command.replaceitem
-    usage: "/<command> <block|entity> <position|player> <slot> <material_id> [count]"
   setblock:
     permission: command.setblock
     usage: "/<command> <x> <y> <z> <block>"
