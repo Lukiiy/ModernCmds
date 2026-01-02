@@ -1,5 +1,5 @@
 name: ModernCmds
-version: '1.0'
+version: '1.1'
 main: me.lukiiy.modernCmds.ModernCmds
 author: Lukiiy
 description: Backports of commands from more recent versions
@@ -28,3 +28,9 @@ commands:
   weather:
     permission: command.weather
     usage: "/<command> <clear|rain|thunder> [duration]"
+  seed:
+    permission: command.seed
+    usage: "/<command>"
+  difficulty:
+    permission: command.difficulty
+    usage: "/<command> [difficulty]"

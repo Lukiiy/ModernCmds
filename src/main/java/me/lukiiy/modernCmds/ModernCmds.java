@@ -5,7 +5,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class ModernCmds extends JavaPlugin {
     private static ModernCmds instance;
-    public static ModernCmds getInstance() {return instance;}
 
     @Override
     public void onEnable() {
@@ -19,7 +18,14 @@ public class ModernCmds extends JavaPlugin {
         getCommand("summon").setExecutor(new Summon());
         getCommand("toggledownfall").setExecutor(new Toggledownfall());
         getCommand("weather").setExecutor(new Weather());
+        getCommand("seed").setExecutor(new Seed());
+        getCommand("difficulty").setExecutor(new Difficulty());
     }
 
-    @Override public void onDisable() {}
+    @Override
+    public void onDisable() {}
+
+    public static ModernCmds getInstance() {
+        return instance;
+    }
 }

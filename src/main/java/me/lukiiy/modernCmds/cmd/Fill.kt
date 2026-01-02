@@ -1,13 +1,12 @@
 package me.lukiiy.modernCmds.cmd
 
+import me.lukiiy.modernCmds.Bound
 import me.lukiiy.modernCmds.Defaults
 import me.lukiiy.modernCmds.Utils.COORD_AXIS
 import me.lukiiy.modernCmds.Utils
 import org.bukkit.Bukkit
 import org.bukkit.Location
 import org.bukkit.Material
-import org.bukkit.World
-import org.bukkit.block.Block
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
@@ -97,28 +96,5 @@ class Fill : CommandExecutor { // TODO: What... is... this?
 
         commandSender.sendMessage(if (blocksChanged > 0) "Successfully filled $blocksChanged block(s)" else "§cNo blocks were filled")
         return true
-    }
-
-    private class Bound(x1: Int, y1: Int, z1: Int, x2: Int, y2: Int, z2: Int) {
-        val minX = minOf(x1, x2)
-        val maxX = maxOf(x1, x2)
-        val minY = minOf(y1, y2)
-        val maxY = maxOf(y1, y2)
-        val minZ = minOf(z1, z2)
-        val maxZ = maxOf(z1, z2)
-
-        fun isIn(block: Block): Boolean {
-            return block.x in (minX + 1) until maxX && block.y in (minY + 1) until maxY && block.z in (minZ + 1) until maxZ
-        }
-
-        fun iterator(world: World, action: (Block) -> Boolean): Int {
-            var changed = 0
-            for (x in minX..maxX)
-                for (y in minY..maxY)
-                    for (z in minZ..maxZ) {
-                        if (action(world.getBlockAt(x, y, z))) changed++
-                    }
-            return changed
-        }
     }
 }

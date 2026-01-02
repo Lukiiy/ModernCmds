@@ -17,7 +17,7 @@ class Summon : CommandExecutor {
     override fun onCommand(commandSender: CommandSender, command: Command, s: String, strings: Array<String?>): Boolean {
         if (strings.isEmpty() || (commandSender !is Player && strings.size < 4)) return Defaults.argFail(commandSender, usage)
 
-        val typeArg = strings[0]!!.toString()
+        val typeArg = strings[0]!!
         val entityType = try {
             CreatureType.valueOf(typeArg.uppercase())
         } catch (_: IllegalArgumentException) {
