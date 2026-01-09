@@ -1,6 +1,7 @@
 package me.lukiiy.modernCmds;
 
 import me.lukiiy.modernCmds.cmd.*;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ModernCmds extends JavaPlugin {
@@ -20,6 +21,8 @@ public class ModernCmds extends JavaPlugin {
         getCommand("weather").setExecutor(new Weather());
         getCommand("seed").setExecutor(new Seed());
         getCommand("difficulty").setExecutor(new Difficulty());
+        getCommand("clone").setExecutor(new Clone());
+        getCommand("farland").setExecutor(new Farland());
     }
 
     @Override

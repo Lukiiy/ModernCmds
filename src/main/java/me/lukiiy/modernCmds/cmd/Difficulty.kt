@@ -31,12 +31,14 @@ class Difficulty : CommandExecutor {
             return true
         }
 
+        val cannonName = intToDiff[difficulty]
+
         if (nmsWorld.spawnMonsters == difficulty) {
-            commandSender.sendMessage("The difficulty did not change; it is already set to ${strings[0]!!}")
+            commandSender.sendMessage("The difficulty did not change; it is already set to $cannonName")
             return true
         }
 
-        commandSender.sendMessage("The difficulty has been set to ${strings[0]!!}")
+        commandSender.sendMessage("The difficulty has been set to $cannonName")
         nmsWorld.spawnMonsters = difficulty
         return true
     }

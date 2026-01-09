@@ -34,3 +34,10 @@ commands:
   difficulty:
     permission: command.difficulty
     usage: "/<command> [difficulty]"
+  clone:
+    permission: command.clone
+    usage: "/<command> <corner1> <corner2> <destination> [replace|masked|filtered] [normal|force|move] [filter material[:data]]"
+  farland:
+    aliases: [ "farlands" ]
+    permission: command.farland
+    usage: "/<command> <n|s|e|w|ne|nw|se|sw> [player]"
