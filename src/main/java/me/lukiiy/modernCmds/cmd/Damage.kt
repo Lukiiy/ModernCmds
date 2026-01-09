@@ -21,7 +21,7 @@ class Damage : CommandExecutor {
             }
         }
 
-        val damage = max(Integer.getInteger(strings[1], 1), 1)
+        val damage = strings[1]?.toIntOrNull()?.coerceAtLeast(1) ?: 1
 
         target.damage(damage)
         commandSender.sendMessage("Applied $damage damage to ${target.name}")
